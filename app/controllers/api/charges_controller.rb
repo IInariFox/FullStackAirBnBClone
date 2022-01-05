@@ -71,9 +71,6 @@ module Api
         return head :ok
       end
       return head :bad_request
+    end
   end
- 
-
-
-  
 end
