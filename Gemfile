@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.4.6', require: false
 # Use kaminari for activerecord pagination
 gem 'kaminari'
 
+# Use Stripe for receiving payments
+gem 'stripe'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 11.1.1', platforms: [:mri, :mingw, :x64_mingw]
