@@ -10,9 +10,11 @@ module Api
           httponly: true
         }
 
-        render 'api/sessions/create', status: :created
+        render 'api/sessions/create', status: :ok
       else
-        render json: { success: false }, status: :bad_request
+        render json: {
+          success: false
+        }, status: :bad_request
       end
     end
 
@@ -22,9 +24,12 @@ module Api
 
       if session
         @user = session.user
+        @user_id = session.user_id
         render 'api/sessions/authenticated', status: :ok
       else
-        render json: { authenticated: false }, status: :bad_request
+        render json: {
+          authenticated: false
+        }, status: :bad_request
       end
     end
 
@@ -33,7 +38,9 @@ module Api
       session = Session.find_by(token: token)
 
       if session and session.destroy
-        render json: { success: true }, status: :ok
+        render json: {
+          success: true
+        }
       end
     end
   end
