@@ -52,7 +52,7 @@ class MyBookings extends React.Component {
                       End Date: {booking.end_date}</b></p>
                     <a href={`http://localhost:3000/property/${booking.property_id}`} className="text-decoration-none">
                       View Property Listing</a>
-                    <p className="text-uppercase text-secondary"><b>    Booking is fully Paid</b></p>
+                    <p className="text-uppercase text-secondary"><b>Booking is fully Paid</b></p>
                   </div>
                 )
               } else {
