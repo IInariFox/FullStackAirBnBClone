@@ -9,6 +9,6 @@ json.property do
   json.bedrooms @property.bedrooms
   json.beds @property.beds
   json.baths @property.baths
-  json.images @property.images
+  json.image_url property.image_url
     
 end
