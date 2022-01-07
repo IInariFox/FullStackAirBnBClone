@@ -52,7 +52,7 @@ class Property extends React.Component {
 
     return (
       <Layout>
-        <div className="property-image mb-3" style={{ backgroundImage: `url(${images[0].image})` }} />
+        <div className="property-image mb-3" style={{ backgroundImage: `url(${image_url})` }} />
         <div>
         </div>
         <div className="container">
@@ -74,14 +74,7 @@ class Property extends React.Component {
               </div>
               <hr />
               <p>{description}</p>
-              <div className="thumbnail-images mb-3">
-              {images.map(function(item, index) {
-              return (
-                <img src={item.image} key={index} width="200" height="200" className="mr-3"></img>
-                )})}
-              </div>
-
-              </div>
+            </div>
             <div className="col-12 col-lg-5">
               <BookingWidget property_id={id} price_per_night={price_per_night} />
             </div>
